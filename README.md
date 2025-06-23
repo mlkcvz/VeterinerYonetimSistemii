@@ -1,6 +1,8 @@
 # 🐾 Veterinary Management System - Java Spring Boot Bitirme Projesi
 
 Bu proje, bir veteriner kliniğinin hasta (hayvan), müşteri (sahip), veteriner hekim, aşı ve randevu süreçlerini dijital ortamda yönetmesini sağlayan bir **RESTful API** çözümüdür. Proje, Spring Boot framework'ü ile katmanlı mimariye uygun şekilde geliştirilmiştir.
+UML 
+![image](https://github.com/user-attachments/assets/cada7b41-f988-4032-8c77-91cf69a57886)
 
 ---
 
