@@ -62,5 +62,52 @@ ID bulunamazsa	NotFoundException
 Randevu çakışması varsa	"Girilen saatte başka bir randevu mevcuttur"
 Doktor o gün çalışmıyorsa	"Doktor bu tarihte çalışmamaktadır"
 
-Tüm istisnalar global olarak GlobalExceptionHandler üzerinden yönetilir.
+Tüm istisnalar global olarak GlobalExceptionHandler üzerinden yönetilir. 
+
+POST http://localhost:8080/api/customers
+Body (JSON):
+{
+  "name": "Ahmet Yılmaz",
+  "phone": "05554443322",
+  "mail": "ahmet@mail.com",
+  "address": "Beşiktaş",
+  "city": "İstanbul"
+}
+✅ Hayvan Ekleme (POST)
+bash
+Kopyala
+Düzenle
+POST http://localhost:8080/api/animals
+Body:
+{
+  "name": "Karabaş",
+  "species": "Köpek",
+  "breed": "Golden",
+  "gender": "Erkek",
+  "colour": "Sarı",
+  "dateOfBirth": "2021-03-01",
+  "customerId": 1
+}
+✅ Aşı Ekleme
+bash
+Kopyala
+Düzenle
+POST http://localhost:8080/api/vaccines
+{
+  "name": "Kuduz",
+  "code": "RAB-01",
+  "protectionStartDate": "2025-06-01",
+  "protectionFinishDate": "2026-06-01",
+  "animalId": 1
+}
+✅ Randevu Ekleme
+bash
+Kopyala
+Düzenle
+POST http://localhost:8080/api/appointments
+{
+  "appointmentDate": "2025-07-15T14:00:00",
+  "doctorId": 1,
+  "animalId": 1
+}
 
