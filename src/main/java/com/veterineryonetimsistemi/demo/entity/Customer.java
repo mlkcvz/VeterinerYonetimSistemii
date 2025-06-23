@@ -12,6 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class Customer {
+    //Sisteme kayıtlı hayvan sahiplerini temsil eder.
+    // Adres, telefon ve e-posta gibi kişisel bilgileri içerir.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

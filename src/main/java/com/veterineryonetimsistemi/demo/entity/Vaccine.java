@@ -12,6 +12,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 public class Vaccine {
+    //Bir hayvana uygulanmış aşı bilgisini içerir. Başlangıç ve bitiş tarihleri ile birlikte tutulur.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

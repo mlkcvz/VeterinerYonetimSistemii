@@ -12,6 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class Doctor {
+    //Klinikte çalışan veteriner hekimi temsil eder.
+    // Birden fazla çalışabileceği tarih bilgisine sahip olabilir.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

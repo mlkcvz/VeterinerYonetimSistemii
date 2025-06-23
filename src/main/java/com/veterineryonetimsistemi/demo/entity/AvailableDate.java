@@ -12,6 +12,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 public class AvailableDate {
+    //Bir veteriner hekimin çalışabileceği belirli bir tarihi temsil eder.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

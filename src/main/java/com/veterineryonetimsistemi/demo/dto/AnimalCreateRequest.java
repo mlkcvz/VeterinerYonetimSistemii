@@ -10,6 +10,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 public class AnimalCreateRequest {
+    //Yeni bir hayvan oluşturmak için kullanılan API veri transfer nesnesidir (DTO).
     private String name;
     private String species;
     private String breed;

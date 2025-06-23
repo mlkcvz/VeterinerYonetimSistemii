@@ -10,6 +10,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 public class AnimalResponse {
+    //API üzerinden geri döndürülen hayvan verilerini taşıyan veri transfer nesnesidir.
     private Long id;
     private String name;
     private String species;

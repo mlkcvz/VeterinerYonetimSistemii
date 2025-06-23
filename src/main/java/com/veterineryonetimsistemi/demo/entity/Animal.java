@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class Animal {
+    //Bir müşteriye ait hayvanı temsil eder. Tür, cins, cinsiyet, renk ve doğum tarihi bilgilerini içerir.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

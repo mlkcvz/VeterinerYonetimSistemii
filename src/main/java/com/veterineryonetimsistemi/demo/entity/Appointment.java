@@ -12,6 +12,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class Appointment {
+    //Bir hayvan ile veteriner hekim arasındaki randevuyu temsil eder.
+    // Tarih, saat ve ilgili taraflar bilgilerini içerir.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
