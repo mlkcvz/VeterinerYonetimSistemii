@@ -13,4 +13,6 @@ public class CustomerCreateRequest {
     private String mail;
     private String address;
     private String city;
+
+
 }

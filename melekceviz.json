@@ -1,0 +1,758 @@
+{
+  "info": {
+    "name": "VeterinerYonetimSistemi - Full API Collection",
+    "_postman_id": "collection-987654321",
+    "description": "Veteriner Y\u00f6netim Sistemi i\u00e7in t\u00fcm CRUD, filtreleme ve test endpointlerini i\u00e7eren koleksiyon.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Customer - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/customers",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "customers"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Ali Veli\",\n  \"phone\": \"5551234567\",\n  \"mail\": \"ali@example.com\",\n  \"address\": \"Ankara Caddesi No:10\",\n  \"city\": \"Ankara\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Customer - List All",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/customers",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "customers"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Customer - Filter by Name",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/customers/search",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "customers",
+            "search"
+          ]
+        },
+        "query": [
+          {
+            "key": "name",
+            "value": "Ali"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Customer - Update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/customers/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "customers",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Ali G\\u00fcncel\",\n  \"phone\": \"5559876543\",\n  \"mail\": \"ali_guncel@example.com\",\n  \"address\": \"\\u0130stanbul Mah.\",\n  \"city\": \"\\u0130stanbul\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Customer - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/customers/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "customers",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Animal - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/animals",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "animals"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Pamuk\",\n  \"species\": \"K\\u00f6pek\",\n  \"breed\": \"Golden Retriever\",\n  \"gender\": \"Di\\u015fi\",\n  \"colour\": \"Sar\\u0131\",\n  \"dateOfBirth\": \"2022-05-10\",\n  \"customerId\": 1\n}"
+        }
+      }
+    },
+    {
+      "name": "Animal - List All",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/animals",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "animals"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Animal - Filter by Name",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/animals/search",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "animals",
+            "search"
+          ]
+        },
+        "query": [
+          {
+            "key": "name",
+            "value": "Pamuk"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Animal - Get by Customer ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/animals/customer/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "animals",
+            "customer",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Animal - Update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/animals/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "animals",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Pamuk G\\u00fcncel\",\n  \"species\": \"K\\u00f6pek\",\n  \"breed\": \"Golden\",\n  \"gender\": \"Di\\u015fi\",\n  \"colour\": \"Beyaz\",\n  \"dateOfBirth\": \"2022-05-10\",\n  \"customerId\": 1\n}"
+        }
+      }
+    },
+    {
+      "name": "Animal - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/animals/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "animals",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Doctor - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/doctors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "doctors"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Dr. Ahmet\",\n  \"phone\": \"5553332211\",\n  \"mail\": \"ahmet@vet.com\",\n  \"address\": \"Baytar sokak\",\n  \"city\": \"\\u0130zmir\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Doctor - List All",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/doctors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "doctors"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Doctor - Update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/doctors/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "doctors",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Dr. Ahmet G\\u00fcncel\",\n  \"phone\": \"5551112233\",\n  \"mail\": \"ahmet_guncel@vet.com\",\n  \"address\": \"G\\u00fcncel adres\",\n  \"city\": \"Bursa\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Doctor - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/doctors/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "doctors",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "AvailableDate - Add",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/available-dates",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "available-dates"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"doctorId\": 1,\n  \"availableDate\": \"2025-07-02\"\n}"
+        }
+      }
+    },
+    {
+      "name": "AvailableDate - List All",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/available-dates",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "available-dates"
+          ]
+        }
+      }
+    },
+    {
+      "name": "AvailableDate - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/available-dates/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "available-dates",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Appointment - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/appointments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "appointments"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"appointmentDate\": \"2025-07-01T07:00:00\",\n  \"doctorId\": 1,\n  \"animalId\": 1\n}"
+        }
+      }
+    },
+    {
+      "name": "Appointment - List All",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/appointments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "appointments"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Appointment - Filter by Animal & Date Range",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/appointments/animal",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "appointments",
+            "animal"
+          ]
+        },
+        "query": [
+          {
+            "key": "animalId",
+            "value": "1"
+          },
+          {
+            "key": "startDate",
+            "value": "2025-06-01"
+          },
+          {
+            "key": "endDate",
+            "value": "2025-08-01"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Appointment - Filter by Doctor & Date Range",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/appointments/doctor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "appointments",
+            "doctor"
+          ]
+        },
+        "query": [
+          {
+            "key": "doctorId",
+            "value": "1"
+          },
+          {
+            "key": "startDate",
+            "value": "2025-06-01"
+          },
+          {
+            "key": "endDate",
+            "value": "2025-08-01"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Appointment - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/appointments/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "appointments",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Vaccine - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/vaccines",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vaccines"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Kuduz\",\n  \"code\": \"VAC-001\",\n  \"protectionStartDate\": \"2024-01-01\",\n  \"protectionFinishDate\": \"2025-01-01\",\n  \"animalId\": 1\n}"
+        }
+      }
+    },
+    {
+      "name": "Vaccine - List All",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/vaccines",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vaccines"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Vaccine - List by Animal ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/vaccines/animal/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vaccines",
+            "animal",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Vaccine - Expiring in Range",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/vaccines/protection",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vaccines",
+            "protection"
+          ]
+        },
+        "query": [
+          {
+            "key": "start",
+            "value": "2025-01-01"
+          },
+          {
+            "key": "end",
+            "value": "2025-12-31"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Vaccine - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/vaccines/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vaccines",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}

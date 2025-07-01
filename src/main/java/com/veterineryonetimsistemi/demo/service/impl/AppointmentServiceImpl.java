@@ -47,7 +47,8 @@ public class AppointmentServiceImpl implements AppointmentService {
         }
 
         boolean conflict = appointmentRepository.existsByDoctorIdAndAppointmentDate(
-                request.getAppointmentDate(), doctor.getId());
+                doctor.getId(), request.getAppointmentDate());
+
         if (conflict) {
             throw new AlreadyExistsException("Girilen saatte başka bir randevu mevcuttur!");
         }

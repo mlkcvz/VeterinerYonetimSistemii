@@ -17,6 +17,8 @@ public class AnimalController {
 
     private final AnimalService animalService;
 
+
+
     @PostMapping
     public ResponseEntity<AnimalResponse> createAnimal(@RequestBody AnimalCreateRequest request) {
         return ResponseEntity.ok(animalService.createAnimal(request));
